@@ -12,7 +12,17 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="./dist/jquery.vmap.js"></script>
   <script type="text/javascript" src="./dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+  <style>
+    .wall {
+      border-image-slice: 18 22 17 23;
+      border-image-width: 20px;
+      border-image-outset: 20px;
+      border-image-repeat: repeat repeat;
+      border-image-source: url(brick.png);
 
+    }
+
+  </style>
 
   <script>
     var passdata = {
@@ -40039,9 +40049,9 @@
         map: 'world_en',
         backgroundColor: '#fff',
         color: '#fff',
-        borderWidth: 0.8,
+        borderWidth: 1,
         hoverOpacity: 0.5,
-        selectedColor: '#FF0066',
+        selectedColor: '#000',
         enableZoom: false,
         //showTooltip: true,
         selectedRegions: null,
@@ -40125,13 +40135,14 @@
 
     </section>
     <div class="f5 lh-copy fl pv2">
-      Click on a <span style="color:#FF0066">country</span> to see how <span style="color:#00FF00">open</span> the world
+      Click on a <span style="background:#000;" class="white">country</span> to see how <span
+        style="color:#00FF00">open</span> the world
       is from its point. Notice how the "wall of equality" is for some countries.
 
     </div>
   </article>
   <div class="pa3 ph4-ns fl w-100 system-sans-serif">
-    <div class="wall ba">
+    <div class="wall ml3-ns ml3 ba mb3-ns mb3 mr3-ns mr3">
       <div id="wallup">
         <div class="flex w-100">
           <div class="w-20 ba pa3 b--gray brick"></div>
